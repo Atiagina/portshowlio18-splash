@@ -1,0 +1,185 @@
+@font-face {
+    font-family: "NeueLight";
+    src: url("./neueLight.otf") format("truetype");
+}
+@font-face {
+    font-family: "NeueHeavy";
+    src: url("./neueHeavy.otf") format("truetype");
+}
+
+body {
+  font-family: "NeueLight", sans-serif;
+  margin: 0;
+  background-color:#000000;
+}
+
+.container{
+	max-width: 35vw;
+	margin:8vh auto;
+    max-height: 85vh;
+	//background-color:#ffffff;
+	padding-left:40px;
+	padding-right:40px;
+	padding-bottom:5vh;
+    transform: rotateY(  0deg ) translateZ( 75px );
+    background-color:white;
+}
+
+.black{
+	color:#000000;
+}
+
+.social{
+	list-style:none;
+}
+
+.icons{
+	float:left;
+	padding:8px;}
+
+h1{
+    font-family: "NeueHeavy", sans-serif;
+    font-size: 5vh;
+    margin-top: 5vh;
+    margin-bottom: 0vh;
+    text-align: right;
+}
+
+h2{
+    font-family: "NeueHeavy", sans-serif;
+    margin-bottom: .4vh;
+    margin-top: 2.5vh;
+	font-size: 4vh;
+}
+
+h3{
+	margin-top:0px;
+	margin-bottom:0px;
+	font-size: 3vh;
+}
+
+h4{
+font-family: "NeueHeavy", sans-serif;
+	margin-bottom:0px;
+	font-size: 1.25vh;
+	margin-top:5px;}
+
+.time{
+    margin-bottom: 2.5vh;
+        font-size: 2vh;
+        padding-left: 1px;
+        margin-top: .2vh;
+}
+
+.fa-2x {
+    font-size: 2.3vh;
+}
+
+p {
+	margin-bottom:0vh;
+	    font-size: 1.5vh;
+}
+
+.twenty {
+    text-align: right;
+    margin-top: -.5vh;
+    font-size: 3vh;
+}
+
+hr{
+	border:thin black solid;
+	width:100%;
+	margin-bottom:0px;
+    display: inline-block;
+    margin-top:0px;
+}
+
+.footer2{
+	margin-top:2.5vh;
+}
+
+.logo {
+    height:14vh;
+    margin-top: 5vh;
+margin-bottom: 5vh;
+}
+
+.scca {
+    font-size: 2vh;
+text-align: right;
+margin-top: 5vh;
+margin-bottom: 5vh;
+}
+
+.shape {
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    transform-style: preserve-3d;
+
+}
+
+ul {
+    padding: 0px;
+}
+
+/* Background video */
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    //min-width: 100%;
+    //min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ 	background: url('poster.jpg') no-repeat;
+  	background-size: cover;
+  	transition: 1s opacity;
+}
+
+ @media screen and (max-width: 1170px) {
+
+.container{
+	width: 420px;
+    max-height: none;
+	max-width:none;
+}
+
+h2{
+	font-size: 22px;
+	 }
+
+h3{
+	font-size: 18px;
+	 }
+
+
+}
+
+
+@media only screen and (max-width: 768px){
+
+.container{
+	max-width: 50vh;
+	width: 410px;
+	margin:8vh auto;
+	height:auto;
+	max-height:none;
+	padding-left:20px;
+	padding-right:20px;
+	padding-bottom:20px;
+    transform: none;
+}
+
+.social{
+	margin-left: -8px;
+	}
+
+.logo{
+	margin-top:3vh;
+    height:auto;
+	}
+
+}

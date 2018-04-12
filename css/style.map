@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../sass/style.css",
+	"sources": [
+		"../sass/style.scss"
+	],
+	"sourcesContent": [
+		"/*!\nTheme Name: portshowlio18-splash\nTheme URI: http://underscores.me/\nAuthor: SCCA Class of 2018\nAuthor URI: http://seattlecentralcreativeacademy.com\nDescription: a custom theme for portshowlio\nVersion: 1.0.0\nLicense: GNU General Public License v2 or later\nLicense URI: http://www.gnu.org/licenses/gpl-2.0.html\nText Domain: portshowlio18-spash\nTags:\n\nThis theme, like WordPress, is licensed under the GPL.\nUse it to make something cool, have fun, and share what you've learned with others.\n\ntacitlephp is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.\nUnderscores is distributed under the terms of the GNU GPL v2 or later.\n\nNormalizing styles have been helped along thanks to the fine work of\nNicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/\n*/\n\n\n$textcolor: #f0816a;\n\nbody {\n\t/*color: $textcolor;*/\n\tbackground: red;\n}\n\nh2 {\n\tcolor: $textcolor;\n}\n\n.container {\n\n}\n\nul {\n\tmargin: 0 0 0 20;\n\tli {\n\t}\n}\n\n\n"
+	],
+	"mappings": "AAAA;;;;;;;;;;;;;;;;;;;;EAoBE;;AAKF,AAAA,IAAI,CAAC;EACJ,sBAAsB;EACtB,UAAU,EAAE,GAAI;CAChB;;;AAED,AAAA,EAAE,CAAC;EACF,KAAK,EARM,OAAO;CASlB;;;AAMD,AAAA,EAAE,CAAC;EACF,MAAM,EAAE,QAAS;CAGjB",
+	"names": []
+}
