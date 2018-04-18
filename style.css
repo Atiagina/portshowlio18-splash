@@ -22,7 +22,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
 @import "css/style.css";
-
+/*
 @font-face {
     font-family: "NeueLight";
     src: url("./neueLight.otf") format("truetype");
@@ -149,6 +149,8 @@ ul {
 
 /* Background video */
 
+/*
+
 video {
     position: fixed;
     top: 50%;
@@ -208,3 +210,5 @@ h3{
 	}
 
 }
+
+*/

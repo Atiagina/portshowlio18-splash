@@ -23,9 +23,28 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 $textcolor: #f0816a;
 
+$popyellow: rgb(245,236,90);
+
+$popblue: rgb(114,199,231);
+
+$popred: rgb(222,56,49);
+
+$popgreen: rgb(0,181,136);
+
+$poppink: rgb(250,206,215);
+
+$popfont: HalisR;
+
 body {
 	/*color: $textcolor;*/
-	background: red;
+	background: none;
+	font-family: $popfont;
+	text-transform: none;
+}
+
+div {
+	margin: 0;
+	padding:0;
 }
 
 h2 {
@@ -42,4 +61,191 @@ ul {
 	}
 }
 
+.backgrounddiv {
+    width: 100vw;
+    height: 100vh;
+   overflow: hidden;
+	 display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 5vh 5vw;
+}
 
+.infocontainer {
+    width: 50%;
+    height: 100%;
+	
+}
+
+#helper {
+	position: relative;
+	z-index: 3;
+}
+
+.yellowblock {
+    width: 100%;
+    height: 50%;
+    background-color: $popyellow;
+    border: 10px solid black;
+	display: flex;
+flex-direction: column;
+	justify-content: center;
+	align-content: space-between;
+	padding: 2vh 2vw;
+	
+	.descriptionblock {
+		width: 80%;
+		align-self: center;
+	}
+	.socialblock {
+		display: flex;
+		justify-content: center;
+						ul{
+		list-style-type: none;
+		width: 70%;
+		margin: 10px auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-content: center;
+							padding-left: 0;
+		li{
+			a{
+				color: black;
+				text-decoration: none;
+			}
+		}
+	}
+	}
+}
+
+.blockrow{
+	width: 100%;
+display: flex;
+	flex-direction: row;
+	
+	
+	.date {
+		width: 70%;
+		height: auto;
+		border: 10px solid black;
+		border-top: none;
+		padding: 2vh 2vw;
+		height: 100%;
+		
+	}
+	
+	.scca {
+		background-color: $popgreen;
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		width: 30%;
+		border: 10px solid black;
+		border-top: none;
+		border-left: none;
+		
+		img {
+			width: 50%;
+			object-fit:contain;
+		}
+	}
+	
+	.address {
+		width: 30%;
+		
+		padding: 2vh 2vw;
+		background-color: $poppink;
+		border: 10px solid black;
+		border-top: none;
+		border-left: none;
+		display: flex;
+		
+		h4 {
+			font-size: 16px;
+			align-self: center;
+		}
+	}
+}
+
+.profesh {
+	background-color: $popblue;
+}
+
+.family {
+	background-color: $popred;
+	border: 10px solid black;
+}
+
+/*wrapper for the red element and parent for our layers */
+#wrapper {
+		
+	width: 100%;
+	height: auto;
+	
+    
+    position: relative;
+	
+    
+		}
+		
+#wrapper:before {
+			    content: '';
+    position: absolute;
+    display: block;
+    top: -20px;
+    left: 20px;
+    right: -20px;
+    bottom: 20px;
+    border: 10px solid black;
+    opacity: 0;
+    -webkit-transition: opacity .4s, -webkit-transform .4s;
+    transition: opacity .4s, -webkit-transform .4s;
+    transition: opacity .4s, transform .4s;
+    transition: opacity .4s, transform .4s, -webkit-transform .4s;
+    z-index: 2;
+	background-color: white;
+			
+		}
+	
+		
+#wrapper:after {
+			    content: '';
+    position: absolute;
+    display: block;
+    top: -40px;
+    left: 40px;
+    right: -40px;
+    bottom: 40px;
+    border: 10px solid black;
+    opacity: 0;
+    -webkit-transition: opacity .4s, -webkit-transform .4s;
+    transition: opacity .4s, -webkit-transform .4s;
+    transition: opacity .4s, transform .4s;
+    transition: opacity .4s, transform .4s, -webkit-transform .4s;
+    z-index: 1;
+			background-color: white;
+		}
+
+/* hover code. we hover over the big element and move the red element. the rest stays where it was but becomes visible */
+		
+.infocontainer:hover .helper {
+			    transform: translate(-20px, -20px);
+		}
+		
+		
+.infocontainer:hover #wrapper:after {
+			opacity: 1;
+			
+		}
+		
+.infocontainer:hover #wrapper:before {
+			opacity: 1;
+		}
+		
+
+@media only screen and (max-width: 600px) {
+	.infocontainer {
+		width: 100%;
+	}
+}
