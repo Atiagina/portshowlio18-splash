@@ -38,7 +38,7 @@ $popfont: HalisR;
 body {
 	/*color: $textcolor;*/
 	background: none;
-	font-family: $popfont;
+	font-family: $popfont, Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 	text-transform: none;
 }
 
@@ -64,17 +64,17 @@ ul {
 .backgrounddiv {
     width: 100vw;
     height: 100vh;
-   overflow: hidden;
 	 display: flex;
     justify-content: center;
     align-content: center;
     padding: 5vh 5vw;
+	
+	
 }
 
 .infocontainer {
-    width: 50%;
+    width: 60%;
     height: 100%;
-	
 }
 
 #helper {
@@ -82,48 +82,79 @@ ul {
 	z-index: 3;
 }
 
+
+
 .yellowblock {
     width: 100%;
     height: 50%;
     background-color: $popyellow;
     border: 10px solid black;
 	display: flex;
-flex-direction: column;
+flex-direction: row;
 	justify-content: center;
 	align-content: space-between;
 	padding: 2vh 2vw;
+	color: black;
 	
-	.descriptionblock {
-		width: 80%;
-		align-self: center;
+	.logoblock {
+		width: 50%;
+		padding: 2vh 2vw;
+	}
+	
+	.content {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		align-self: flex-end;
+		.descriptionblock {
+		width: 100%;
+		align-self: baseline;
 	}
 	.socialblock {
 		display: flex;
-		justify-content: center;
-						ul{
+		justify-content: left;
+		
+	  	ul{
 		list-style-type: none;
-		width: 70%;
-		margin: 10px auto;
+		width: 60%;
+		margin: 10px 0;
 		display: flex;
 		flex-direction: row;
-		justify-content: space-around;
-		align-content: center;
-							padding-left: 0;
+		justify-content: space-between;
+		align-items: left;
+		padding-left: 0;
 		li{
 			a{
 				color: black;
 				text-decoration: none;
+				&:hover {
+        color:white;
+    }
 			}
 		}
 	}
 	}
+	}
+	
 }
 
-.blockrow{
+.blockrow,
+.blockrow2{
 	width: 100%;
 display: flex;
 	flex-direction: row;
+	h1 {
+		text-transform: uppercase;
+		font-size: 2em;
+		margin-bottom: 0;
+		line-height: 1em;
+		font-family: HalisRBold;
+	}
 	
+	h3 {
+		
+		line-height: .5em;
+	}
 	
 	.date {
 		width: 70%;
@@ -136,7 +167,9 @@ display: flex;
 	}
 	
 	.scca {
-		background-color: $popgreen;
+		background-image: url(../img/pattern.svg);
+	background-repeat:repeat;
+	background-size:40%;
 		display: flex;
 		align-content: center;
 		justify-content: center;
@@ -146,8 +179,9 @@ display: flex;
 		border-left: none;
 		
 		img {
-			width: 50%;
-			object-fit:contain;
+			/*width: 50%;
+			object-fit:contain;*/
+			display: none;
 		}
 	}
 	
@@ -160,6 +194,7 @@ display: flex;
 		border-top: none;
 		border-left: none;
 		display: flex;
+		color: black;
 		
 		h4 {
 			font-size: 16px;
@@ -170,11 +205,13 @@ display: flex;
 
 .profesh {
 	background-color: $popblue;
+	color: black;
 }
 
 .family {
 	background-color: $popred;
 	border: 10px solid black;
+	color: white;
 }
 
 /*wrapper for the red element and parent for our layers */
@@ -193,10 +230,10 @@ display: flex;
 			    content: '';
     position: absolute;
     display: block;
-    top: -20px;
-    left: 20px;
-    right: -20px;
-    bottom: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     border: 10px solid black;
     opacity: 0;
     -webkit-transition: opacity .4s, -webkit-transform .4s;
@@ -213,10 +250,10 @@ display: flex;
 			    content: '';
     position: absolute;
     display: block;
-    top: -40px;
-    left: 40px;
-    right: -40px;
-    bottom: 40px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     border: 10px solid black;
     opacity: 0;
     -webkit-transition: opacity .4s, -webkit-transform .4s;
@@ -236,16 +273,117 @@ display: flex;
 		
 .infocontainer:hover #wrapper:after {
 			opacity: 1;
+	top: 40px;
+    left: -40px;
+    right: 40px;
+    bottom: -40px;
 			
 		}
 		
 .infocontainer:hover #wrapper:before {
 			opacity: 1;
+	top: 20px;
+    left: -20px;
+    right: 20px;
+    bottom: -20px;
 		}
 		
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
+	
+	
+	.yellowblock {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		.logoblock {
+			width: 50%;
+			
+		}
+	}
+
 	.infocontainer {
 		width: 100%;
+		margin-left: 2vw;
 	}
+		
+	
+	.helper {
+			    transform: translate(-20px, -20px);
+		}
+	
+	#wrapper:after {
+			opacity: 1;
+	top: 40px;
+    left: -40px;
+    right: 40px;
+    bottom: -40px;
+			
+		}
+		
+#wrapper:before {
+			opacity: 1;
+	top: 20px;
+    left: -20px;
+    right: 20px;
+    bottom: -20px;
+		}
+	.yellowblock {
+	.content {
+			width: 70%;
+		margin: 10px auto;
+			
+			.socialblock {
+		display: flex;
+		justify-content: center;
+						ul{
+		list-style-type: none;
+		width: 70%;
+		margin: 10px auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		}
+	}
+	}
+	}
+	
+	}
+
+
+@media only screen and (max-width: 500px) {
+	
+	
+		
+	.blockrow,
+	.blockrow2 {
+	
+	h1 {
+		text-transform: uppercase;
+		font-size: 1.5em;
+		margin-bottom: 0;
+		line-height: 1em;
+		font-family: HalisRBold;
+	}
+		
+		h3 {
+			font-size: 1.2em;
+		}
+	}
+	
+	.blockrow2 {
+		width: 100%;
+display: flex;
+	flex-direction: column;
+		.date {
+			width: 100%;
+		}
+		.address {
+			width: 100%;
+			border-left: 10px solid black;
+		}
+	}
+	
 }
+	
